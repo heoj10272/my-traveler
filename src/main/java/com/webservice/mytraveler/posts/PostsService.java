@@ -56,5 +56,8 @@ public class PostsService {
         return postsRepository.findAllDesc().stream()
                 .map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
+            //게시글 전체 조회
+            //postsRepository  결과로 넘어온 Posts의 Stream을 map을 통해 PostsListReponseDto로 변환 -> List로 반환하는 메서드
+            //posts의 stream이 뭔가요..?
     }
 }

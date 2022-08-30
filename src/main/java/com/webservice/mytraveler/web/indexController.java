@@ -55,10 +55,6 @@ public class indexController {
         model.addAttribute("post", dto);
         if (user != null){
             model.addAttribute("loginUserName", user.getName());
-            model.addAttribute("postAuthor", dto.getAuthor());
-        }
-        if (dto.getAuthor().equals(user.getName())){
-            model.addAttribute("thisIsAuthor",true);
         }
 
         return "posts-retrieve";
